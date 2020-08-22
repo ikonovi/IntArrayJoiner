@@ -1,24 +1,17 @@
 package ik;
 
+import java.util.StringJoiner;
+
 /**
  * Utility class for log messages during execution.
  */
 public class ArrayPrinter {
 
-    public static void printIntArrayToConsole(int[] array) {
-        String output;
-        for (int i = 0; i < array.length; i++) {
-            if (i < array.length - 1) {
-                output = "" + array[i] + ", ";
-            } else {
-                output = "" + array[i] + "\n";
-            }
-            System.out.print(output);
-        }
-    }
-
     public static void printIntArrayToConsole(int[] array, String message) {
-        System.out.println(message);
-        printIntArrayToConsole(array);
+        StringJoiner stringJoiner = new StringJoiner(", ", message + " [","]");
+        for (int i : array) {
+            stringJoiner.add(String.valueOf(i));
+        }
+        System.out.println(stringJoiner);
     }
 }

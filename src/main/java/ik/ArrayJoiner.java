@@ -28,7 +28,7 @@ public class ArrayJoiner {
         ArrayPrinter.printIntArrayToConsole(this.arrayJoined, "Concatenated array:");
         // Step #2
         bubbleSort(this.arrayJoined);
-        ArrayPrinter.printIntArrayToConsole(this.arrayJoined, "Sorted array:");
+        ArrayPrinter.printIntArrayToConsole(this.arrayJoined, "Sorted array:      ");
         // Step #3
         this.arrayJoined = removeDuplicatesInSortedArray(this.arrayJoined);
         ArrayPrinter.printIntArrayToConsole(this.arrayJoined, "Removed duplicates array:");
